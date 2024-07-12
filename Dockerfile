@@ -1,6 +1,8 @@
 # Use an official Node.js runtime as the base image
 FROM node:18-alpine
 
+ARG network_name
+ENV DOCKER_BUILD_NETWORK=${idms-network}
 # Set the working directory
 WORKDIR /app
 
